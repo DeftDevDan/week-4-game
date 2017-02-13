@@ -31,11 +31,11 @@ function start() {
 	defender=0;
 	//declare new characters and values
 
-	luke = new Char("Luke Skywalker", 7, 15, 475, "assets/images/luke200.jpg", "assets/images/luke600.jpg");
-	yoda = new Char("Yoda", 9, 20, 400, "assets/images/yoda200.jpg", "assets/images/yoda600.jpg");
-	vader = new Char("Darth Vader", 4, 30, 525, "assets/images/vader200.jpg", "assets/images/vader600.jpg");
-	obiwan = new Char("Obi Wan Kenobi", 4, 18, 600, "assets/images/obiwan200.jpg", "assets/images/obiwan600.jpg");
-	maul = new Char("Darth Maul", 3, 25, 675, "assets/images/darthmaul200.jpg", "assets/images/darthmaul600.jpg");
+	luke = new Char("Luke Skywalker", 7, 15, 475, "assets/images/Luke200.jpg", "assets/images/Luke600.jpg");
+	yoda = new Char("Yoda", 9, 20, 400, "assets/images/Yoda200.jpg", "assets/images/Yoda600.jpg");
+	vader = new Char("Darth Vader", 4, 30, 525, "assets/images/Vader200.jpg", "assets/images/Vader600.jpg");
+	obiwan = new Char("Obi Wan Kenobi", 4, 18, 600, "assets/images/ObiWan200.jpg", "assets/images/ObiWan600.jpg");
+	maul = new Char("Darth Maul", 3, 25, 675, "assets/images/DarthMaul200.jpg", "assets/images/DarthMaul600.jpg");
 	characters = [luke, yoda, vader, obiwan, maul];
 }
 
