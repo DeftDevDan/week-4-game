@@ -119,6 +119,7 @@ body {
 		top:10px;
 	}
 	#healthFull {
+		width: 90%;
 		margin-top: 20px;
 	}
 	#myChar {
