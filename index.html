@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StarWars RPG Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel = "stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<div id="myChar">
+		<img id="avatar">
+		<div id="healthFull">
+			<div id="currentHP" class = "col-xs-12">
+			</div>
+			<p id="currentHPnum" class = "col-xs-12"></p>
+			<p id="myAP" class="col-xs-12"></p>
+		</div>
+	</div>
+
+	<div id="game">
+		<div id="difficulty">
+			<h1>Choose Your Difficulty</h1>
+			<button class="btn-success" onClick="easy()">Easy</button>
+			<button class="btn-warning" onClick="medium()">Medium</button>
+			<button class="btn-danger" onClick="hard()">Hard</button>
+		</div>
+		<div id="choose">
+			<h1>Choose Your Character</h1>
+			<div><img id="char0" class="img-responsive img-circle" onClick="select(0)"><span class="well col-xs-12"><p id="stats0AP"></p><p id="stats0HP"></p></span></div>
+			<div><img id="char1" class="img-responsive img-circle" onClick="select(1)"><span class="well col-xs-12"><p id="stats1AP"></p><p id="stats1HP"></p></div>
+			<div><img id="char2" class="img-responsive img-circle" onClick="select(2)"><span class="well col-xs-12"><p id="stats2AP"></p><p id="stats2HP"></p></div>
+			<div class="ez-noshow"><img id="char3" class="img-responsive img-circle" onClick="select(3)"><span class="well col-xs-12"><p id="stats3AP"></p><p id="stats3HP"></p></div>
+			<div class="ez-noshow md-noshow"><img id="char4" class="img-responsive img-circle" onClick="select(4)"><span class="well col-xs-12"><p id="stats4AP"></p><p id="stats4HP"></p></div>
+		</div>
+		<div id="defender" class = "col-xs-12 col-md-offset-1 col-md-7 well">
+			<h1>Defender</h1>
+			<button id="attack" onClick="attackSet()">Attack</button>
+			<br>
+			<img id="defenderPic" class="img-responsive">
+		</div>
+		<div id="enemies" class = "col-xs-12 col-md-offset-1 col-md-2 well">
+			<h4 id="totalEnemies"></h4>
+			<div id="en0"><img id="enemy0" class="img-responsive img-circle" onClick="move(0)"><span class="well col-xs-12"><p id="stats0CAP"></p><span><p id="stats0CHP"></p></div>
+			<div id="en1"><img id="enemy1" class="img-responsive img-circle" onClick="move(1)"><span class="well col-xs-12"><p id="stats1CAP"></p><span><p id="stats1CHP"></p></div>
+			<div id="en2"><img id="enemy2" class="img-responsive img-circle" onClick="move(2)"><span class="well col-xs-12"><p id="stats2CAP"></p><span><p id="stats2CHP"></p></div>
+			<div id="en3"><img id="enemy3" class="img-responsive img-circle" onClick="move(3)"><span class="well col-xs-12"><p id="stats3CAP"></p><span><p id="stats3CHP"></p></div>
+		</div>
+	</div>
+	<div id="battle">
+		<div class="container col-xs-12" style="margin-top:20px;">
+		<button id="fight" onClick="attack()">Attack</button>
+		</div>
+		<div class="battle well col-xs-offset-1 col-xs-5">
+		<img id="battlePic1" class="img-responsive">
+		<div id="attackerHP" class="col-xs-offset-2 col-xs-8"><div id="attackHP"></div></div>
+		</div>
+		<div class="battle well col-xs-5">
+		<img id="battlePic2" class="img-responsive">
+		<div id="defenderHP" class="col-xs-offset-2 col-xs-8"><div id="defendHP"></div></div>
+		</div>
+	</div>
+
+	<div id="endGame">
+		<h1 id="result"></h1>
+		<img id="resultPic">
+		<button id="playAgain" onClick="reset()">Play Again</button>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="assets/js/starwars.js"></script>
+</body>
+</html>
