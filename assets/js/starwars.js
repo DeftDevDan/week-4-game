@@ -56,7 +56,7 @@ function Char(name,AP,CAP,HP, image1, image2) {
 
 //function loops through and resets all HTML, variables, and CSS back to default
 function reset() {
-
+	alert("JK, coming soon xD");
 }
 
 //Player selects difficulty of game. Easy will load 3 random objects, medium will load 4 random objects, hard will load all 5 objects
