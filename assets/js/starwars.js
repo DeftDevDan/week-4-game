@@ -23,6 +23,7 @@ function start() {
 	$("#enemy4").attr("src", "");
 	$("#game").show();
 	$("#difficulty").show();
+	$("#HowToPlay").show();
 	$("#myChar").show();
 	$("#endGame").hide();
 	$("#myChar").hide();
@@ -61,6 +62,7 @@ function reset() {
 
 //Player selects difficulty of game. Easy will load 3 random objects, medium will load 4 random objects, hard will load all 5 objects
 function easy() {
+	$("#HowToPlay").hide();
 	var rand1 = Math.floor(Math.random()*5);
 	var rand2 = Math.floor(Math.random()*4);
 	var rand3 = Math.floor(Math.random()*3);
@@ -93,6 +95,7 @@ function easy() {
 }
 
 function medium() {
+	$("#HowToPlay").hide();
 	var rand1 = Math.floor(Math.random()*5);
 	var rand2 = Math.floor(Math.random()*4);
 	var rand3 = Math.floor(Math.random()*3);
@@ -131,6 +134,7 @@ function medium() {
 }
 
 function hard() {
+	$("#HowToPlay").hide();
 	char = [luke, yoda, vader, obiwan, maul];
 	$("#char0").attr("src", char[0].image1);
 	$("#char1").attr("src", char[1].image1);
