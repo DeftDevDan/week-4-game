@@ -92,6 +92,10 @@ function easy() {
 	$("#choose").animate().fadeIn("1000");
 	$("#difficulty").animate().fadeOut("1000");
 	totalEnemy = 2;
+
+	for (var i = 0; i < char.length; i++) {
+		char[i].CAP = Math.floor(char[i].CAP*1.3);
+	}
 }
 
 function medium() {
@@ -131,6 +135,10 @@ function medium() {
 	$("#choose").animate().fadeIn("1000");
 	$("#difficulty").animate().fadeOut("1000");
 	totalEnemy = 3;
+
+	for (var i = 0; i < char.length; i++) {
+		char[i].CAP = Math.floor(char[i].CAP*1.1);
+	}
 }
 
 function hard() {
@@ -151,6 +159,8 @@ function hard() {
 	document.getElementById('stats3HP').innerHTML = "Health Points: " + char[3].HP;
 	document.getElementById('stats4AP').innerHTML = "Attack Power: " + char[4].AP;
 	document.getElementById('stats4HP').innerHTML = "Health Points: " + char[4].HP;
+
+
 
 	$("#choose").animate().fadeIn("1000");
 	$("#difficulty").animate().fadeOut("1000");
@@ -173,16 +183,7 @@ function select(x) {
 	document.getElementById('totalEnemies').innerHTML = "Number of Enemies Remaining: " + totalEnemy;
 	document.getElementById('currentHPnum').innerHTML = player.HP + "/" + player.baseHP;
 	document.getElementById('myAP').innerHTML = "Attack Power: " + player.AP;
-
-	document.getElementById('stats0CAP').innerHTML += "Attack Power: " + char[0].CAP;
-	document.getElementById('stats1CAP').innerHTML += "Attack Power: " + char[1].CAP;
-	document.getElementById('stats2CAP').innerHTML += "Attack Power: " + char[2].CAP;
-	document.getElementById('stats3CAP').innerHTML += "Attack Power: " + char[3].CAP;
-
-	document.getElementById('stats0CHP').innerHTML += "Health Points: " + char[0].HP;
-	document.getElementById('stats1CHP').innerHTML += "Health Points: " + char[1].HP;
-	document.getElementById('stats2CHP').innerHTML += "Health Points: " + char[2].HP;
-	document.getElementById('stats3CHP').innerHTML += "Health Points: " + char[3].HP;
+	setCAPCHP();
 }
 
 //This function will move all enemies that weren't selected to the enemies well. Animate show the enemies well, animate move the enemies. Animate hide the select well, and animate show the defender well.
@@ -263,4 +264,11 @@ function loser() {
 	$("#myChar").animate().fadeOut("1000");
 	$("#endGame").animate().fadeIn("1000");
 	document.getElementById('result').innerHTML = "CONGRATULATIONS! YOU LOST! LOSER!!!";
+}
+
+function setCAPCHP() {
+	for(var i = 0; i < char.length; i++) {
+		document.getElementById('stats'+i+"CAP").innerHTML="Attack Power: " + char[i].CAP;
+		document.getElementById('stats'+i+"CHP").innerHTML="Health Points: " + char[i].HP;
+	}
 }
