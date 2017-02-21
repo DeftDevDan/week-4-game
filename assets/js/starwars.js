@@ -1,15 +1,8 @@
 window.onload = start;
 var characters = [];
-var luke;
-var yoda;
-var vader;
-var obiwan;
-var maul;
+var luke, yoda, vader, obiwan, maul, defender, player, totalEnemy;
 var char=[];
-var defender;
-var player;
 var enemies=[];
-var totalEnemy;
 
 function start() {
 	$("#enemies").hide();
