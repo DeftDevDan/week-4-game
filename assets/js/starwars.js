@@ -257,7 +257,7 @@ function winner() {
 	$("#game").animate().fadeOut("1000");
 	$("#myChar").animate().fadeOut("1000");
 	$("#endGame").animate().fadeIn("1000");
-	document.getElementById('result').innerHTML = "CONGRATULATIONS! YOU WON!";
+	document.getElementById('result').innerHTML = "Congratulations! You Won!";
 }
 
 function loser() {
@@ -265,7 +265,7 @@ function loser() {
 	$("#game").animate().fadeOut("1000");
 	$("#myChar").animate().fadeOut("1000");
 	$("#endGame").animate().fadeIn("1000");
-	document.getElementById('result').innerHTML = "CONGRATULATIONS! YOU LOST! LOSER!!!";
+	document.getElementById('result').innerHTML = "Congratulations! You lost! Loser!!!";
 }
 
 function setCAPCHP() {
