@@ -114,6 +114,10 @@ body {
 	background-color:red;
 }
 
+#endGame {
+	text-align:center;
+}
+
 @media screen and (max-width: 835px) {
 	#avatar {
 		top:10px;

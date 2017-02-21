@@ -57,7 +57,17 @@ function Char(name,AP,CAP,HP, image1, image2) {
 
 //function loops through and resets all HTML, variables, and CSS back to default
 function reset() {
-	alert("JK, coming soon xD");
+	start();
+	$(".ez-noshow").show();
+	$("#attackHP").css("width", "100%");
+	$("#currentHP").css("width", "100%");
+	for (var i=0; i < 4; i++) {
+		$("#enemy"+i).css("opacity", "1");
+		$("#enemy"+i).attr("onClick", "move("+i+")");
+		$("#en"+i).show();
+	}
+	$("#defenderPic").hide();
+	defender = "";
 }
 
 //Player selects difficulty of game. Easy will load 3 random objects, medium will load 4 random objects, hard will load all 5 objects
@@ -87,14 +97,14 @@ function easy() {
 	document.getElementById('stats2AP').innerHTML = "Attack Power: " + char[2].AP;
 	document.getElementById('stats2HP').innerHTML = "Health Points: " + char[2].HP;
 
-	$(".ez-noshow").css("display", "none");
+	$(".ez-noshow").hide();
 
 	$("#choose").animate().fadeIn("1000");
 	$("#difficulty").animate().fadeOut("1000");
 	totalEnemy = 2;
 
 	for (var i = 0; i < char.length; i++) {
-		char[i].CAP = Math.floor(char[i].CAP*1.3);
+		char[i].CAP = Math.floor(char[i].CAP*1.2);
 	}
 }
 
@@ -253,7 +263,6 @@ function attack() {
 function winner() {
 	$("#game").animate().fadeOut("1000");
 	$("#myChar").animate().fadeOut("1000");
-	$("#endGame").animate().fadeIn("1000");
 	$("#endGame").animate().fadeIn("1000");
 	document.getElementById('result').innerHTML = "CONGRATULATIONS! YOU WON!";
 }
