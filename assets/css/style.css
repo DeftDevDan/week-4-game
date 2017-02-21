@@ -2,6 +2,16 @@ body {
 	background-image: url("../images/background.jpg");
 	background-position:fixed;
 }
+@font-face {
+    font-family: starjedi;
+    src: url(../font/starjedi/Starjedi.ttf);
+}
+h1 {
+	color: #000;
+	text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+	font-family: starjedi;
+	font-weight: bold;
+}
 #avatar {
 	display:inline-block;
 	position: relative;
