@@ -1,6 +1,7 @@
 body {
 	background-image: url("../images/background.jpg");
-	background-position:fixed;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
 }
 @font-face {
     font-family: starjedi;
